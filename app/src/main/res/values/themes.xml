@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TrueWord" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- statusbar create black . -->
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#191b20</item>
+        <item name="colorPrimaryVariant">#191b20</item>
+        <item name="colorOnPrimary">#191b20</item>
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.TrueWord" parent="Base.Theme.TrueWord" />
+
+    <style name="TransparentDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+</resources>

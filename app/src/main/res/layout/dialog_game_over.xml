@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#191b20"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="18dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Game Over"
+                android:textAlignment="center"
+                android:textColor="#ec5002"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/correct_score_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Correct Score: "
+                android:textAlignment="center"
+                android:textColor="#ec5002"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/correct_count_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:fontFamily="sans-serif-medium"
+                android:textAlignment="textStart"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/correct_score_textview"
+                app:layout_constraintEnd_toEndOf="@+id/textView2"
+                app:layout_constraintStart_toEndOf="@+id/correct_score_textview"
+                app:layout_constraintTop_toTopOf="@+id/correct_score_textview" />
+            <TextView
+                android:id="@+id/wrong_score_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Wrong Score: "
+                android:textAlignment="center"
+                android:textColor="#ec5002"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/correct_score_textview"
+                app:layout_constraintStart_toStartOf="@+id/correct_score_textview"
+                app:layout_constraintTop_toBottomOf="@+id/correct_score_textview" />
+
+            <TextView
+                android:id="@+id/wrong_count_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textAlignment="textStart"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/wrong_score_textview"
+                app:layout_constraintEnd_toEndOf="@+id/correct_count_textview"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/wrong_score_textview"
+                app:layout_constraintTop_toTopOf="@+id/wrong_score_textview"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/play_again"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/word_correct_button"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/play_again"
+                android:textAllCaps="false"
+                android:textColor="#ec5002"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/close_button"
+                app:layout_constraintStart_toStartOf="@+id/wrong_score_textview"
+                app:layout_constraintTop_toBottomOf="@+id/wrong_count_textview" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/close_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:background="@drawable/word_correct_button"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/dismiss"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/play_again"
+                app:layout_constraintEnd_toEndOf="@+id/wrong_count_textview"
+                app:layout_constraintStart_toEndOf="@+id/play_again"
+                app:layout_constraintTop_toTopOf="@+id/play_again" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
